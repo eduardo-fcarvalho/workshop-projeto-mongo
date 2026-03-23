@@ -1,7 +1,6 @@
 package com.nelioalves.workshopmongo.config;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
@@ -28,7 +27,7 @@ public class Instantiation implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy").withZone(ZoneId.of("GMT"));
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 		userRepository.deleteAll();
 		postRepository.deleteAll();
